@@ -3,7 +3,6 @@
 class Event_model extends CI_Model {
     function __construct(){
         parent::__construct();
-        //$this->db->initialize();
     }
 
     //이벤트 리스트
@@ -22,8 +21,7 @@ class Event_model extends CI_Model {
             } else {
                 $sql = 'SELECT * FROM event_board  WHERE endDate < date(now()) ORDER BY endDate DESC';
             }
-            // pMemberID int, pMemberName varchar(50), pCategory smallint, pTitle varchar(100), pContents varchar(1000)
-            //$sql = 'SELECT * FROM event_board WHERE ".$p_result." ORDER BY endDate DESC';
+            
             $query = $this->db->query($sql);
             return $query->result();
 
@@ -77,7 +75,7 @@ class Event_model extends CI_Model {
     }
 
 
-    // 프리마켓 상태 변경
+    // 상태 변경
 
     public function update($data){
 
@@ -92,7 +90,7 @@ class Event_model extends CI_Model {
                 return false;
         }
         catch (Exception $e) {
-            //echo $e->getMessage();
+            
             return false;
         }
     }
@@ -110,7 +108,7 @@ class Event_model extends CI_Model {
                 return false;
         }
         catch (Exception $e) {
-            //echo $e->getMessage();
+           
             return false;
         }
 
