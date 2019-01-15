@@ -77,12 +77,6 @@
 
 
                     <div class="col-sm-9" id="upfileform">
-<!--                        <input type="file" class="form-control" id="img_path" name="img_path" style="display:none;">-->
-<!--                        <button type="button" class="btnImage btn-lg pd2" style="vertical-align:middle; "-->
-<!--                                id="image_add"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>-->
-<!--                        </button>-->
-<!--                        <p class="form-control-static text-right" style="color:red;display:none"></p>-->
-
                         <span class=" eng"> * 파일명은 영어로만 가능합니다 </span>
                         <input type="file"  name="insert_img" required/>
 
@@ -102,8 +96,7 @@
                 <div class="row" style="margin:10px;">
                     <form method="POST" action="event/write_ok">
                         <input type="hidden" name="user" value="<?php echo $user ?>">
-                        <!--                            <input type="hidden" name="insert_img" value="--><?php //echo $insert_img ?><!--">-->
-
+                          
                         <?php
                         if($user == "f") {
                             $idx = $_REQUEST['idx'];
