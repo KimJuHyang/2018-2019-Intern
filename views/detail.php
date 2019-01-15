@@ -17,8 +17,7 @@
 
 <div class="container-sub">
     <div class="content" style="margin-top: 50px; text-align: center">
-        <?php
-        //$test =$_GET["idx"];
+        <?ph
         $today = date("Ymd");
 
         ?>
@@ -97,7 +96,7 @@
                         <button type="submit" class="btn btn-success" >수정</button>
                 </form>
 
-            <!-- 삭제시 안내 팝업 뜨게하기 -->
+        
             <form method="post" action="/event/delete" style="float: left">
                 <input type="hidden" name="idx" value="<?php echo $list->idx; ?>">
                 <button type="submit" class="btn btn-danger"> 삭제 </button>
