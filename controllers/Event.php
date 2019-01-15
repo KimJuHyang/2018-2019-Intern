@@ -7,18 +7,14 @@ class Event extends CI_Controller {
         parent::__construct();
 
         $this->load->model('event_model');
-
-        //$this->$action();
     }
 
 
     public function index(){
 
         $this->lists();
-        //$this->write();
-    }
 
-    //수정
+    }
 
     //목록
     public function lists() {
@@ -68,8 +64,6 @@ class Event extends CI_Controller {
             $this -> load -> view('board/event/write',$data);
 
         } else {
-
-           // $data['view'] = $this->event_model->view();
             $this->load->model('event_model');
             $id = $_GET['idx'];
             $temp = $this->event_model->view($id);
@@ -140,8 +134,7 @@ class Event extends CI_Controller {
         $this->load->model('event_model');
         $data['html'] = new Html_lib("하이루에 오신것을 환영합니다.");
         $this->event_model->drop($_POST["idx"]);
-
-        $file = "Tulips.jpg";
+        
         if(is_file($file))
         {
 
